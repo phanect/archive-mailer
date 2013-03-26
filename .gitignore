@@ -4,3 +4,7 @@ iggy.db*
 *.bak
 mail.db*
 awsadmin
+.project
+.pydevproject
+build/*
+virtualenv/*
