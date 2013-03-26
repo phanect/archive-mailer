@@ -1,7 +1,9 @@
-# Django settings for theiggy_com project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+PROJECT_ROOT = os.path.dirname(__file__)
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -105,11 +107,11 @@ INSTALLED_APPS = (
 )
 
 STATICFILES_DIRS = (
-	'/var/www/django_webmail/media',
+	os.path.join(PROJECT_ROOT, 'media'),
 	'/usr/lib/python2.7/dist-packages/django/contrib/admin/static/admin',
 )
 STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/django_webmail/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static/')
 
 AUTH_PROFILE_MODULE = 'person.UserProfile'
 
