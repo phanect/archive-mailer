@@ -80,13 +80,13 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.doc.XViewMiddleware',
 )
 
-ROOT_URLCONF = 'django_webmail.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '../django_webmail/templates/',
+    os.path.join(PROJECT_ROOT, '/templates/'),
 )
 
 #TEMPLATE_CONTEXT_PROCESSORS = (
@@ -101,8 +101,8 @@ INSTALLED_APPS = (
 	#'django.contrib.messages',
 	'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django_webmail.mail',
-    'django_webmail.person',
+    'mail',
+    'person',
     #'django_extensions',
 )
 
